@@ -1,0 +1,22 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Tiêu đề website</title>
+        <script src="notice.js"></script>
+        <script src="https://js.pusher.com/3.2/pusher.min.js"></script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            var pusher = new Pusher('10d5ea7e7b632db09c72', {
+                encrypted: true
+            });
+            var channel = pusher.subscribe('Freetuts');
+            channel.bind('notice', function (data) {
+                    console.log(data.name);
+            });
+        </script>
+        <p style="color:#ff0000;line-height:20px">
+            Bạn đang tìm hiểu demo realtime trong php bằng cách sử dụng pusher, bạn cần đồng ý cho phép thông báo trên trang web này để có thể test demo trong bài này. Bạn đừng đi đâu cả hay mở tab mới chạy file send.php để xem kết quả nhé
+        </p>
+    </body>
+</html>

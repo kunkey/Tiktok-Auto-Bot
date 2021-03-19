@@ -1,0 +1,76 @@
+RewriteEngine on
+
+ErrorDocument 404 /pages/error_pages/404.php
+ErrorDocument 500 /pages_error/500.html
+
+
+# Rewrite Url
+RewriteRule ^index.html$ index.php [L]
+RewriteRule ^home$ index.php [L]
+RewriteRule ^home.html$ index.php [L]
+RewriteRule ^register.html$ pages/account/register.php [L]
+RewriteRule ^signin.html$ pages/account/login.php [L]
+RewriteRule ^signout.html$ pages/account/out.php [L]
+RewriteRule ^fb-login.html$ pages/account/fb-login.php [L]
+RewriteRule ^action$ pages/action [L]
+
+
+ # Rewrite Module
+RewriteRule ^system/user$ modun/account/user.php [L]
+RewriteRule ^system/user/change_pass$ modun/account/user_change_pass.php [L]
+RewriteRule ^system/user/edit_account$ modun/account/user_edit.php [L]
+RewriteRule ^profile.html$ pages/account/profile.php [L]
+RewriteRule ^system/check$ modun/account/check.php [L]
+RewriteRule ^system/auto_follow$ modun/action/auto_follow.php [L]
+
+
+
+
+
+
+
+
+
+
+
+
+
+# BEGIN cPanel-generated php ini directives, do not edit
+
+# Manual editing of this file may result in unexpected behavior.
+# To make changes to this file, use the cPanel MultiPHP INI Editor (Home >> Software >> MultiPHP INI Editor)
+# For more information, read our documentation (https://go.cpanel.net/EA4ModifyINI)
+<IfModule php5_module>
+   php_flag asp_tags Off
+   php_flag display_errors On
+   php_value max_execution_time 360
+   php_value max_input_time 360
+   php_value max_input_vars 1000
+   php_value memory_limit 512M
+   php_value post_max_size 512M
+   php_value session.gc_maxlifetime 1440
+   php_value session.save_path "/opt/alt/php56/var/lib/php/session"
+   php_value upload_max_filesize 512M
+   php_flag zlib.output_compression Off
+</IfModule>
+<IfModule lsapi_module>
+   php_flag asp_tags Off
+   php_flag display_errors On
+   php_value max_execution_time 360
+   php_value max_input_time 360
+   php_value max_input_vars 1000
+   php_value memory_limit 512M
+   php_value post_max_size 512M
+   php_value session.gc_maxlifetime 1440
+   php_value session.save_path "/opt/alt/php56/var/lib/php/session"
+   php_value upload_max_filesize 512M
+   php_flag zlib.output_compression Off
+</IfModule>
+# END cPanel-generated php ini directives, do not edit
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# Set the “alt-php56” package as the default “PHP” programming language.
+<IfModule mime_module>
+  AddHandler application/x-httpd-alt-php56 .php .php5 .phtml
+</IfModule>
+# php -- END cPanel-generated handler, do not edit
