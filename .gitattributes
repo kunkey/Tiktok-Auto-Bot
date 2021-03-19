@@ -1,2 +1,1 @@
-*.js linguist-detectable=false
-*.php linguist-detectable=true
+*.php linguist-detectable=false
